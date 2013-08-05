@@ -1,0 +1,9 @@
+{
+	"installed_packages":
+	[
+		"Git",
+		"Package Control",
+		"SideBarEnhancements",
+		"SublimeLinter"
+	]
+}

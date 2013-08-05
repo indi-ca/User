@@ -1,0 +1,13 @@
+<snippet>
+	<content><![CDATA[
+  - id: SPT Text
+    text: 
+    type: Textbox
+    default_text: I acknowledge that I have considered and applied QInvest's sole purpose test guidelines in determining the fees to be charged for this advice. Any fee to be deducted from superannuation meets these guidelines.
+    notes: Delete the old one. Set visible to false.
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>textbox</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.plain, source.yaml</scope>
+</snippet>

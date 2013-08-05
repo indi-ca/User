@@ -1,0 +1,18 @@
+<snippet>
+	<content><![CDATA[
+  - id: Require Research
+    text: What research is required?
+    type: Checkbox_Multi
+    items:
+    - Super Switching (Simple)
+    - Super Switching (Complex)
+    - Budgetting / Cashflow
+    - Insurance Assessment
+    - Strategy Modelling
+    - Research - General
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>checkbox</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.plain, source.yaml</scope>
+</snippet>

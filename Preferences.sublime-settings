@@ -1,0 +1,9 @@
+{
+	"atomic_save": true,
+	"ensure_newline_at_eof_on_save": true,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"save_on_focus_lost": true
+}
