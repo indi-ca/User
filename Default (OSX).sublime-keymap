@@ -1,14 +1,17 @@
 [
-    // OSX Configuration
 
+    //Windows Key Bindings changed on Local...
+    
 
     { "keys": ["super+r"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": true} },
     { "keys": ["super+shift+r"], "command": "show_overlay", "args": {"overlay": "command_palette"} },
     { "keys": ["super+alt+r"], "command": "prompt_select_workspace" },
-
+    
     { "keys": ["super+l"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": true} },
     { "keys": ["super+shift+l"], "command": "show_overlay", "args": {"overlay": "command_palette"} },
     { "keys": ["super+alt+l"], "command": "prompt_select_project" },
+
+
 
 
     { "keys": ["super+,"], "command": "close" },

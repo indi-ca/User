@@ -43,13 +43,21 @@ class Remap:
         #with open(self.sublime_osx_file) as f:
         #    print (f.read())
 
+        logger.info('Generating OSX Configuration File')
+        logger.info('aka... converting the Windows configuration file into the OSX one')
+
         if os.path.exists(self.sublime_osx_file):
            os.unlink(self.sublime_osx_file)
 
+        with open(self.sublime_osx_file, 'w') as w:
+            with open(self.sublime_win_file, 'r') as f:
+                for line in f:
+                    newline = line.replace("ctrl", "ctxxxyyyyxxxxrl")
+                    newline = newline.replace("super", "suxxxyyyyxxxxper")
+                    newline = newline.replace("ctxxxyyyyxxxxrl", "super")
+                    newline = newline.replace("suxxxyyyyxxxxper", "ctrl")
 
-        with open(self.sublime_win_file, 'w') as w:
-            for line in fileinput.FileInput(self.sublime_win_file):
-                w.write(line.replace("ctrl", "super"))
+                    w.write(newline)
 
 
            #line = line.replace("super"," ")
