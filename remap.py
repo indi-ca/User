@@ -37,14 +37,24 @@ class Remap:
         pass
 
     def regenerate_windows(self):
-        pass
+        logger.info('Generating Windows Configuration File')
+        logger.info('aka... converting OSX -> Windows')
+
+        if os.path.exists(self.sublime_win_file):
+           os.unlink(self.sublime_win_file)
+
+        with open(self.sublime_win_file, 'w') as w:
+            with open(self.sublime_osx_file, 'r') as f:
+                for line in f:
+                    newline = line.replace("super", "SWAP_VARIABLE")
+                    newline = newline.replace("ctrl", "super")
+                    newline = newline.replace("SWAP_VARIABLE", "ctrl")
+                    w.write(newline)
+
 
     def regenerate_osx(self):
-        #with open(self.sublime_osx_file) as f:
-        #    print (f.read())
-
         logger.info('Generating OSX Configuration File')
-        logger.info('aka... converting the Windows configuration file into the OSX one')
+        logger.info('aka... converting Windows -> OSX')
 
         if os.path.exists(self.sublime_osx_file):
            os.unlink(self.sublime_osx_file)
@@ -52,17 +62,11 @@ class Remap:
         with open(self.sublime_osx_file, 'w') as w:
             with open(self.sublime_win_file, 'r') as f:
                 for line in f:
-                    newline = line.replace("ctrl", "ctxxxyyyyxxxxrl")
-                    newline = newline.replace("super", "suxxxyyyyxxxxper")
-                    newline = newline.replace("ctxxxyyyyxxxxrl", "super")
-                    newline = newline.replace("suxxxyyyyxxxxper", "ctrl")
-
+                    newline = line.replace("ctrl", "SWAP_VARIABLE")
+                    newline = newline.replace("super", "ctrl")
+                    newline = newline.replace("SWAP_VARIABLE", "super")
                     w.write(newline)
 
-
-           #line = line.replace("super"," ")
-        #    print line
-        #pass
 
     def configure_logging(self):
         logger.setLevel(logging.DEBUG)
