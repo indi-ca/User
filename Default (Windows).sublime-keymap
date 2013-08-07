@@ -1,7 +1,5 @@
 [
 
-    //Windows Key Bindings changed on Local...
-
 
     { "keys": ["ctrl+r"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": true} },
     { "keys": ["ctrl+shift+r"], "command": "show_overlay", "args": {"overlay": "command_palette"} },

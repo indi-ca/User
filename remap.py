@@ -37,13 +37,9 @@ class Remap:
 
     def process(self):
         self.last_file_updated()
-        #self.regenerate_osx()
         pass
 
     def last_file_updated(self):
-        # A list of 'sublime-keymap' files
-        # Their last updated timestamp
-        # The one which was updated last, is the source file
         query = '*.sublime-keymap'
         keymap_files = glob.glob(query)
 
@@ -56,7 +52,6 @@ class Remap:
 
         if last_modified_file == 'Default (OSX).sublime-keymap':
             self.regenerate_windows()
-
         pass
 
 

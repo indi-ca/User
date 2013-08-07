@@ -1,7 +1,5 @@
 [
 
-    //OSX Key Bindings changed on Local...
-
 
     { "keys": ["super+r"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": true} },
     { "keys": ["super+shift+r"], "command": "show_overlay", "args": {"overlay": "command_palette"} },
