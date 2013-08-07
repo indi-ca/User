@@ -2,7 +2,7 @@
 
 """Remap
 
-Supports the creation of Advice Wizards
+Remaps Sublime keymap files between OSX and Windows
 
 
 Usage:
@@ -17,12 +17,15 @@ Options:
 __author__ = "Indika Piyasena"
 
 
-import os, sys
+import os, sys, glob
 import logging
 import fileinput
 from docopt import docopt
 
 logger = logging.getLogger(__name__)
+
+def mtime(filename):
+    return os.stat(filename).st_mtime
 
 
 class Remap:
@@ -33,8 +36,25 @@ class Remap:
         self.sublime_osx_file = 'Default (OSX).sublime-keymap'
 
     def process(self):
-        self.regenerate_osx()
+        self.last_file_updated()
+        #self.regenerate_osx()
         pass
+
+    def last_file_updated(self):
+        # A list of 'sublime-keymap' files
+        # Their last updated timestamp
+        # The one which was updated last, is the source file
+        query = '*.sublime-keymap'
+        keymap_files = glob.glob(query)
+
+        sorted_files = sorted(keymap_files, key=mtime, reverse=1)
+
+        for f in keymap_files:
+            print os.stat(f).st_mtime
+
+        pass
+
+
 
     def regenerate_windows(self):
         logger.info('Generating Windows Configuration File')
