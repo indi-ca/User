@@ -5,12 +5,6 @@
 Remaps Sublime keymap files between OSX and Windows
 
 
-Usage:
-   remap.py regenerate <config>
-
-Options:
-    -h --help     Show this screen.
-    --version     Show version.
 
 """
 
@@ -20,7 +14,6 @@ __author__ = "Indika Piyasena"
 import os, sys, glob
 import logging
 import fileinput
-from docopt import docopt
 
 logger = logging.getLogger(__name__)
 
@@ -31,7 +24,6 @@ def mtime(filename):
 class Remap:
     def __init__(self):
         self.configure_logging()
-        self.arguments = docopt(__doc__, version='Remap 0.1')
         self.sublime_win_file = 'Default (Windows).sublime-keymap'
         self.sublime_osx_file = 'Default (OSX).sublime-keymap'
 
