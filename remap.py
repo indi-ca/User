@@ -48,12 +48,16 @@ class Remap:
         keymap_files = glob.glob(query)
 
         sorted_files = sorted(keymap_files, key=mtime, reverse=1)
+        last_modified_file = sorted_files[0]
 
-        for f in keymap_files:
-            print os.stat(f).st_mtime
+        # So, is this the Windows file or the OSX file?
+        if last_modified_file == 'Default (Windows).sublime-keymap':
+            self.regenerate_osx()
+
+        if last_modified_file == 'Default (OSX).sublime-keymap':
+            self.regenerate_windows()
 
         pass
-
 
 
     def regenerate_windows(self):

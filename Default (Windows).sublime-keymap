@@ -1,12 +1,12 @@
 [
 
     //Windows Key Bindings changed on Local...
-    
+
 
     { "keys": ["ctrl+r"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": true} },
     { "keys": ["ctrl+shift+r"], "command": "show_overlay", "args": {"overlay": "command_palette"} },
     { "keys": ["ctrl+alt+r"], "command": "prompt_select_workspace" },
-    
+
     { "keys": ["ctrl+l"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": true} },
     { "keys": ["ctrl+shift+l"], "command": "show_overlay", "args": {"overlay": "command_palette"} },
     { "keys": ["ctrl+alt+l"], "command": "prompt_select_project" },
