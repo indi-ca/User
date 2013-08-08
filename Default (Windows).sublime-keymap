@@ -5,8 +5,6 @@
     { "keys": ["ctrl+alt+l"], "command": "prompt_select_project" },
 
 
-
-
     { "keys": ["ctrl+,"], "command": "close" },
 
 
