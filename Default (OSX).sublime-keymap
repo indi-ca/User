@@ -8,6 +8,11 @@
     { "keys": ["super+,"], "command": "close" },
 
 
+    // Find and Replace
+
+    // Use selection to replace
+    //{ "keys": ["super+alt+f"], "command": "slurp_replace_string" },
+
     // Toggling Comments
     { "keys": ["super+\\"], "command": "toggle_comment", "args": { "block": false } },
     { "keys": ["super+shift+\\"], "command": "toggle_comment", "args": { "block": true } },
@@ -17,6 +22,9 @@
 
     { "keys": ["super+alt+e"], "command": "reveal_in_side_bar"},
     { "keys": ["super+ctrl+e"], "command": "open_dir", "args": {"dir": "$file_path", "file": "$file_name"}},
+
+    // Window manipulation
+    { "keys": ["super+ctrl+w"], "command": "close_window" },
 
     // Tab manipulation
     { "keys": ["super+alt+right"], "command": "next_view" },
@@ -62,5 +70,9 @@
 
     // Console
     { "keys": ["super+/"], "command": "show_panel", "args": {"panel": "console", "toggle": true} },
+
+    // Copy File Path
+    //{ "keys": ["super+alt+c"], "command": "filename_to_clipboard" },
+    { "keys": ["super+shift+c"], "command": "path_to_clipboard" },
 
 ]
