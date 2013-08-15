@@ -73,6 +73,5 @@
 
     // Copy File Path
     //{ "keys": ["ctrl+alt+c"], "command": "filename_to_clipboard" },
-    { "keys": ["ctrl+shift+c"], "command": "path_to_clipboard" },
-
+    { "keys": ["ctrl+shift+c"], "command": "path_to_clipboard" }
 ]
