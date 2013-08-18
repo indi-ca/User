@@ -1,5 +1,4 @@
 [
-
     { "keys": ["super+r"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": true} },
     { "keys": ["super+shift+r"], "command": "show_overlay", "args": {"overlay": "command_palette"} },
     { "keys": ["super+alt+r"], "command": "prompt_select_project" },
@@ -73,6 +72,5 @@
 
     // Copy File Path
     //{ "keys": ["super+alt+c"], "command": "filename_to_clipboard" },
-    { "keys": ["super+shift+c"], "command": "path_to_clipboard" },
-
+    { "keys": ["super+shift+c"], "command": "path_to_clipboard" }
 ]
