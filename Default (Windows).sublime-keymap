@@ -4,10 +4,16 @@
     { "keys": ["ctrl+shift+r"], "command": "show_overlay", "args": {"overlay": "command_palette"} },
     { "keys": ["ctrl+alt+r"], "command": "prompt_select_project" },
 
-
     { "keys": ["ctrl+,"], "command": "close" },
 
-
+    // Vintage mode
+    { "keys": ["h", "h"], "command": "exit_insert_mode",
+        "context":
+        [
+            { "key": "setting.command_mode", "operand": false },
+            { "key": "setting.is_widget", "operand": false }
+        ]
+    },
     // Find and Replace
 
     // Use selection to replace
