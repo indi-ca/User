@@ -1,11 +1,10 @@
 [
+
     { "keys": ["super+r"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": true} },
     { "keys": ["super+shift+r"], "command": "show_overlay", "args": {"overlay": "command_palette"} },
     { "keys": ["super+alt+r"], "command": "prompt_select_project" },
 
-
     { "keys": ["super+,"], "command": "close" },
-
 
     // Vintage mode
     { "keys": ["h", "h"], "command": "exit_insert_mode",
@@ -15,7 +14,6 @@
             { "key": "setting.is_widget", "operand": false }
         ]
     },
-
     // Find and Replace
 
     // Use selection to replace
