@@ -1,6 +1,5 @@
 [
 
-
     // Meta
     { "keys": ["super+k", "super+m"], "command": "my_chained_actions" },
 
@@ -12,6 +11,11 @@
     { "keys": ["super+r"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": true} },
     { "keys": ["super+shift+r"], "command": "show_overlay", "args": {"overlay": "command_palette"} },
     { "keys": ["super+alt+r"], "command": "prompt_select_project" },
+
+    // { "keys": ["super+alt+e"], "command": "reveal_in_side_bar"},
+    { "keys": ["super+1"], "command": "open_sublime_explorer"},
+    { "keys": ["super+ctrl+e"], "command": "open_dir", "args": {"dir": "$file_path", "file": "$file_name"}},
+
 
     { "keys": ["super+,"], "command": "close" },
 
@@ -37,8 +41,6 @@
     { "keys": ["super+d"], "command": "duplicate_line" },
 
 
-    { "keys": ["super+alt+e"], "command": "reveal_in_side_bar"},
-    { "keys": ["super+ctrl+e"], "command": "open_dir", "args": {"dir": "$file_path", "file": "$file_name"}},
 
     // Window manipulation
     { "keys": ["super+ctrl+w"], "command": "close_window" },
