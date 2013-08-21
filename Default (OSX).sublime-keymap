@@ -1,5 +1,14 @@
 [
 
+
+    // Meta
+    { "keys": ["super+k", "super+m"], "command": "my_chained_actions" },
+
+    // Console
+    { "keys": ["super+/"], "command": "show_panel", "args": {"panel": "console", "toggle": true} },
+
+
+    // Navigation
     { "keys": ["super+r"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": true} },
     { "keys": ["super+shift+r"], "command": "show_overlay", "args": {"overlay": "command_palette"} },
     { "keys": ["super+alt+r"], "command": "prompt_select_project" },
@@ -7,13 +16,15 @@
     { "keys": ["super+,"], "command": "close" },
 
     // Vintage mode
-    { "keys": ["h", "h"], "command": "exit_insert_mode",
+    { "keys": ["i", "i"], "command": "exit_insert_mode",
         "context":
         [
             { "key": "setting.command_mode", "operand": false },
             { "key": "setting.is_widget", "operand": false }
         ]
     },
+
+
     // Find and Replace
 
     // Use selection to replace
@@ -73,9 +84,6 @@
 
     { "keys": ["super+y"], "command": "sublimelinter", "args": {"action": "lint"} },
 
-
-    // Console
-    { "keys": ["super+/"], "command": "show_panel", "args": {"panel": "console", "toggle": true} },
 
     // Copy File Path
     //{ "keys": ["super+alt+c"], "command": "filename_to_clipboard" },

@@ -20,6 +20,9 @@ logger = logging.getLogger(__name__)
 def mtime(filename):
     return os.stat(filename).st_mtime
 
+def atime(filename):
+    return os.stat(filename).st_atime
+
 
 class Remap:
     def __init__(self):
@@ -37,17 +40,29 @@ class Remap:
 
         sorted_files = sorted(keymap_files, key=mtime, reverse=1)
         last_modified_file = sorted_files[0]
+        second_last_modified_file = sorted_files[1]
 
-        # So, is this the Windows file or the OSX file?
-        if last_modified_file == 'Default (Windows).sublime-keymap':
-            self.regenerate_osx()
+        t1 = mtime(last_modified_file)
+        t2 = mtime(second_last_modified_file)
 
-        if last_modified_file == 'Default (OSX).sublime-keymap':
-            self.regenerate_windows()
+        logger.debug('Last modified time: {0}'.format(t1))
+        logger.debug('Second Last modified time: {0}'.format(t2))
+
+        if abs(t1 - t2) < 0.1:
+            logger.info('Both files are timestamp equal')
+        else:
+            last_modified_time = mtime(last_modified_file)
+            last_access_time = atime(last_modified_file)
+
+            # So, is this the Windows file or the OSX file?
+            if last_modified_file == 'Default (Windows).sublime-keymap':
+                self.regenerate_osx(last_access_time, last_modified_time)
+
+            if last_modified_file == 'Default (OSX).sublime-keymap':
+                self.regenerate_windows(last_access_time, last_modified_time)
         pass
 
-
-    def regenerate_windows(self):
+    def regenerate_windows(self, with_access_timestamp, with_modified_timestamp):
         logger.info('Generating Windows Configuration File')
         logger.info('aka... converting OSX -> Windows')
 
@@ -62,8 +77,9 @@ class Remap:
                     newline = newline.replace("SWAP_VARIABLE", "ctrl")
                     w.write(newline)
 
+        os.utime(self.sublime_win_file, (with_access_timestamp, with_modified_timestamp))
 
-    def regenerate_osx(self):
+    def regenerate_osx(self, with_access_timestamp, with_modified_timestamp):
         logger.info('Generating OSX Configuration File')
         logger.info('aka... converting Windows -> OSX')
 
@@ -78,6 +94,7 @@ class Remap:
                     newline = newline.replace("SWAP_VARIABLE", "super")
                     w.write(newline)
 
+        os.utime(self.sublime_osx_file, (with_access_timestamp, with_modified_timestamp))
 
     def configure_logging(self):
         logger.setLevel(logging.DEBUG)
