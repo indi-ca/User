@@ -5,7 +5,7 @@
     { "keys": ["super+k", "super+m"], "command": "my_chained_actions" },
 
     // Console
-    { "keys": ["super+/"], "command": "show_panel", "args": {"panel": "console", "toggle": true} },
+    { "keys": ["ctrl+/"], "command": "show_panel", "args": {"panel": "console", "toggle": true} },
 
 
     // Navigation
