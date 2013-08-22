@@ -4,7 +4,7 @@
     { "keys": ["super+k", "super+m"], "command": "my_chained_actions" },
 
     // Console
-    { "keys": ["ctrl+/"], "command": "show_panel", "args": {"panel": "console", "toggle": true} },
+    { "keys": ["super+alt+c"], "command": "show_panel", "args": {"panel": "console", "toggle": true} },
 
 
     // Navigation
@@ -89,5 +89,9 @@
 
     // Copy File Path
     //{ "keys": ["super+alt+c"], "command": "filename_to_clipboard" },
-    { "keys": ["super+shift+c"], "command": "path_to_clipboard" }
+    { "keys": ["super+shift+c"], "command": "path_to_clipboard" },
+
+
+    // Totally custom
+    { "keys": ["super+alt+n"], "command": "insert_date" }
 ]

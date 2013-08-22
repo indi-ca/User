@@ -4,9 +4,12 @@ import sys
 
 sidebar_visible = False
 
-class Bob(sublime_plugin.TextCommand):
+class InsertDateCommand(sublime_plugin.TextCommand):
     def run(self, edit):
-        self.view.insert(edit, 0, "LocateMe")
+        edit.insertCharacters("hello")
+        #line = edit.line(region)
+        #lineContents = 'Today' + '\n'
+        #edit.insert(line.begin(), lineContents)
 
 class FilenameToClipboardCommand(sublime_plugin.TextCommand):
    def run(self, edit):
@@ -19,14 +22,15 @@ class PathToClipboardCommand(sublime_plugin.TextCommand):
 class MyChainedActionsCommand(sublime_plugin.WindowCommand):
    def run(self):
       if sys.platform == "win32":
-        self.window.run_command("open_dir", {"dir": "U:/.Pycharm20/config/keymaps"})
-        self.window.run_command("open_file", {"file": "U:/.Pycharm20/config/keymaps/boxfile.txt"})
+        # self.window.run_command("open_dir", {"dir": "U:/.Pycharm20/config/keymaps"})
+        # self.window.run_command("open_file", {"file": "U:/.Pycharm20/config/keymaps/boxfile.txt"})
         self.window.run_command("open_file", {"file": "${packages}/User/Default (Windows).sublime-keymap"})
         # self.window.run_command("open_file", {"file": "/cygdrive/u/.PyCharm20/config/keymaps/Win_Pycharm_Frictionless.xml"})
-        self.window.run_command("open_file", {"file": "U:\\.PyCharm20\\config\\keymaps\\Win_Pycharm_Frictionless.xml"})
+        self.window.run_command("open_file", {"file": "U:/.PyCharm20/config/keymaps/Win_Pycharm_Frictionless.xml"})
       else:
         self.window.run_command("open_file", {"file": "${packages}/User/Default (OSX).sublime-keymap"})
         self.window.run_command("open_file", {"file": "/Users/indika/Library/Preferences/PyCharm20/keymaps/OSX_Pycharm_Frictionless.xml"})
+
       self.window.run_command("open_file", {"file": "${packages}/User/extensions.py"})
 
 
