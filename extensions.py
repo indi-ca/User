@@ -19,8 +19,11 @@ class PathToClipboardCommand(sublime_plugin.TextCommand):
 class MyChainedActionsCommand(sublime_plugin.WindowCommand):
    def run(self):
       if sys.platform == "win32":
+        self.window.run_command("open_dir", {"dir": "U:/.Pycharm20/config/keymaps"})
+        self.window.run_command("open_file", {"file": "U:/.Pycharm20/config/keymaps/boxfile.txt"})
         self.window.run_command("open_file", {"file": "${packages}/User/Default (Windows).sublime-keymap"})
-        self.window.run_command("open_file", {"file": "/Users/indika/Library/Preferences/PyCharm20/keymaps/Win_Pycharm_Frictionless.xml"})
+        # self.window.run_command("open_file", {"file": "/cygdrive/u/.PyCharm20/config/keymaps/Win_Pycharm_Frictionless.xml"})
+        self.window.run_command("open_file", {"file": "U:\\.PyCharm20\\config\\keymaps\\Win_Pycharm_Frictionless.xml"})
       else:
         self.window.run_command("open_file", {"file": "${packages}/User/Default (OSX).sublime-keymap"})
         self.window.run_command("open_file", {"file": "/Users/indika/Library/Preferences/PyCharm20/keymaps/OSX_Pycharm_Frictionless.xml"})
@@ -38,5 +41,6 @@ class OpenSublimeExplorerCommand(sublime_plugin.WindowCommand):
         self.window.run_command("reveal_in_side_bar")
         self.window.run_command("focus_side_bar")
         sidebar_visible = True
+
 
 
