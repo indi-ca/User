@@ -26,7 +26,8 @@ class MyChainedActionsCommand(sublime_plugin.WindowCommand):
         # self.window.run_command("open_file", {"file": "U:/.Pycharm20/config/keymaps/boxfile.txt"})
         self.window.run_command("open_file", {"file": "${packages}/User/Default (Windows).sublime-keymap"})
         # self.window.run_command("open_file", {"file": "/cygdrive/u/.PyCharm20/config/keymaps/Win_Pycharm_Frictionless.xml"})
-        self.window.run_command("open_file", {"file": "U:/.PyCharm20/config/keymaps/Win_Pycharm_Frictionless.xml"})
+        # self.window.run_command("open_file", {"file": "U:/.PyCharm20/config/keymaps/Win_Pycharm_Frictionless.xml"})
+        # self.window.run_command("open_file", {"file": "${c}/Win_Pycharm_Frictionless.xml"})
       else:
         self.window.run_command("open_file", {"file": "${packages}/User/Default (OSX).sublime-keymap"})
         self.window.run_command("open_file", {"file": "/Users/indika/Library/Preferences/PyCharm20/keymaps/OSX_Pycharm_Frictionless.xml"})
