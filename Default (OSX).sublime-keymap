@@ -30,9 +30,16 @@
 
 
     // Find and Replace
+    { "keys": ["super+i"], "command": "show_panel", "args": {"panel": "incremental_find", "reverse": false} },
+    { "keys": ["super+shift+i"], "command": "show_panel", "args": {"panel": "incremental_find", "reverse": true} },
+    { "keys": ["super+f"], "command": "show_panel", "args": {"panel": "find", "reverse": false} },
+    { "keys": ["super+shift+f"], "command": "show_panel", "args": {"panel": "replace", "reverse": false} },
+    { "keys": ["super+shift+e"], "command": "replace_next" },
+    { "keys": ["super+g"], "command": "find_next" },
+    { "keys": ["super+shift+g"], "command": "find_prev" },
+    { "keys": ["super+e"], "command": "slurp_find_string" },
+    { "keys": ["super+shift+e"], "command": "slurp_replace_string" },
 
-    // Use selection to replace
-    //{ "keys": ["super+alt+f"], "command": "slurp_replace_string" },
 
     // Toggling Comments
     { "keys": ["super+\\"], "command": "toggle_comment", "args": { "block": false } },
