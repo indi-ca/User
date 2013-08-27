@@ -4,8 +4,6 @@
 
 Remaps Sublime keymap files between OSX and Windows
 
-
-
 """
 
 __author__ = "Indika Piyasena"
