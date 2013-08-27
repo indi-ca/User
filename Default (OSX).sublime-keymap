@@ -102,3 +102,4 @@
     // Totally custom
     { "keys": ["super+alt+n"], "command": "insert_date" }
 ]
+
