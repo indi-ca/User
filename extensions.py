@@ -2,7 +2,7 @@ import sublime, sublime_plugin
 import os
 import sys
 
-sidebar_visible = False
+sidebar_visible = True
 
 class InsertDateCommand(sublime_plugin.TextCommand):
     def run(self, edit):
