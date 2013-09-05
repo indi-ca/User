@@ -20,31 +20,34 @@ __author__ = "Indika Piyasena"
 import os, sys
 import logging
 import pickle
-import yaml
 
 from docopt import docopt
+from pushbullet import PushBullet
+
 
 logger = logging.getLogger(__name__)
 
 
-class PushBullet:
+class PushBulletWrapper:
     def __init__(self):
         self.configure_logging()
 
         self.data = []
         self.cache_file = 'pickled.data'
-        self.yaml_file = 'data.yml'
 
     def process(self):
-        self.arguments = docopt(__doc__, version='PushBullet 0.1')
-        logger.info('PushBullet started...')
+        self.arguments = docopt(__doc__, version='PushBulletWrapper 0.1')
+        logger.info('PushBulletWrapper started...')
 
-        loaded_stream = self.load_yaml(self.yaml_file)
-        if loaded_stream is None:
-            logger.info('Previous data does not exist')
-        else:
-            logger.info('Loaded data')
-        pass
+        apiKey = "ff309eaf3af91efbbfbe590c7fcac464"
+        p = PushBullet(apiKey)
+        # p = PushBullet(apiKey)
+        # Get a list of devices
+        devices = p.getDevices()
+
+        # Send a note
+        p.pushNote(devices[0]["id"], 'Hello world', 'Test body')
+
 
     def configure_logging(self):
         logger.setLevel(logging.DEBUG)
@@ -65,34 +68,23 @@ class PushBullet:
         file_pi = open(self.cache_file, 'r')
         self.data = pickle.load(file_pi)
 
-    def save_yaml(self, expressions):
-        with open(self.yaml_file, 'w') as outfile:
-            outfile.write(yaml.dump(expressions, default_flow_style=False))
-
-    def load_yaml(self, yaml_file):
-        if os.path.exists(yaml_file):
-            stream = open(yaml_file, 'r')
-            return yaml.load(stream)
-        else:
-            return None
-
 
     def log(self):
         pass
 
 def test_something():
-    push_bullet = PushBullet()
+    push_bullet = PushBulletWrapper()
     push_bullet.create_record()
     assert(True)
 
 
 if __name__ == "__main__":
-    print "Running PushBullet in stand-alone-mode"
+    print "Running PushBulletWrapper in stand-alone-mode"
 
     abspath = os.path.abspath(__file__)
     dname = os.path.dirname(abspath)
     os.chdir(dname)
 
-    push_bullet = PushBullet()
+    push_bullet = PushBulletWrapper()
     push_bullet.process()
 
