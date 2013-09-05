@@ -6,7 +6,7 @@ Supports the creation of Advice Wizards
 
 
 Usage:
-   push_bullet.py idea <idea>
+   push_bullet.py thought <thought>
 
 Options:
     -h --help     Show this screen.
@@ -44,9 +44,13 @@ class PushBulletWrapper:
         # p = PushBullet(apiKey)
         # Get a list of devices
         devices = p.getDevices()
+        for d in devices:
+            print d
+
+        print devices[0]
 
         # Send a note
-        p.pushNote(devices[0]["id"], 'Hello world', 'Test body')
+        p.pushNote(devices[0]["id"], 'Idea', self.arguments['<thought>'])
 
 
     def configure_logging(self):
