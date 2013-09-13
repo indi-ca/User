@@ -27,7 +27,10 @@
             { "key": "setting.is_widget", "operand": false }
         ]
     },
-
+    {"keys": ["alt+up"], "command": "scroll_lines", "args": {"amount": 40.0}, "context": [{ "key": "setting.command_mode" }]},
+    {"keys": ["alt+shift+up"], "command": "scroll_lines", "args": {"amount": 80.0}, "context": [{ "key": "setting.command_mode" }]},
+    {"keys": ["alt+down"], "command": "scroll_lines", "args": {"amount": -40.0}, "context": [{"key": "setting.command_mode"}]},
+    {"keys": ["alt+shift+down"], "command": "scroll_lines", "args": {"amount": -80.0}, "context": [{"key": "setting.command_mode"}]},
 
     // Find and Replace
     { "keys": ["ctrl+i"], "command": "show_panel", "args": {"panel": "incremental_find", "reverse": false} },
