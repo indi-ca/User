@@ -7,6 +7,7 @@
 	"ignored_packages":
 	[
 	],
+	"folder_exclude_patterns": [".svn", ".git", ".hg", "CVS", "node_modules"],
 	"line_numbers": false,
 	"save_on_focus_lost": true,
 	"tab_size": 4,
