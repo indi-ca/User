@@ -1,7 +1,8 @@
 [
 
     // Meta
-    { "keys": ["super+k", "super+m"], "command": "my_chained_actions" },
+    // { "keys": ["super+k", "super+m"], "command": "my_chained_actions" },
+    { "keys": ["super+,"], "command": "my_chained_actions" },
 
     // Console
     { "keys": ["super+alt+c"], "command": "show_panel", "args": {"panel": "console", "toggle": true} },
@@ -17,7 +18,7 @@
     { "keys": ["super+ctrl+e"], "command": "open_dir", "args": {"dir": "$file_path", "file": "$file_name"}},
 
 
-    { "keys": ["super+,"], "command": "close" },
+    { "keys": ["super+w"], "command": "close" },
 
     // Vintage mode
     { "keys": ["i", "i"], "command": "exit_insert_mode",
@@ -103,6 +104,6 @@
 
 
     // Totally custom
-    { "keys": ["super+alt+n"], "command": "insert_date" }
+    { "keys": ["super+alt+n"], "command": "sublime_push_bullet" }
 ]
 

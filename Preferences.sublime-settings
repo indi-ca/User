@@ -2,14 +2,24 @@
 	"atomic_save": true,
 	"auto_find_in_selection": true,
 	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
+	"dictionary": "Packages/Language - English/en_US.dic",
 	"enable_telemetry": "false",
 	"ensure_newline_at_eof_on_save": true,
+	"folder_exclude_patterns":
+	[
+		".svn",
+		".git",
+		".hg",
+		"CVS",
+		"node_modules"
+	],
+	"font_size": 12,
 	"ignored_packages":
 	[
 	],
-	"folder_exclude_patterns": [".svn", ".git", ".hg", "CVS", "node_modules"],
 	"line_numbers": false,
 	"save_on_focus_lost": true,
+	"spell_check": false,
 	"tab_size": 4,
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,

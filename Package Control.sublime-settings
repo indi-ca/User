@@ -3,6 +3,8 @@
 	"installed_packages":
 	[
 		"Git",
+		"Google Spell Check",
+		"JSONLint",
 		"Package Control",
 		"SideBarEnhancements",
 		"SublimeLinter",
