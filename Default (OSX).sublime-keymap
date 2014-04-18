@@ -43,7 +43,7 @@
     { "keys": ["super+shift+g"], "command": "find_prev" },
     { "keys": ["super+e"], "command": "slurp_find_string" },
     { "keys": ["super+shift+e"], "command": "slurp_replace_string" },
-    { "keys": ["super+alt+f"], "command": "show_panel", "args": {"panel": "find_in_files"} },
+    { "keys": ["super+alt+f"], "command": "show_panel", "args": {"panel": "find_in_files", "where":"/Users/indika/dev/box/safechat/nbwebscan/src/nbwebscan/twitter,-*.conv,-*.py.orig, -*.json"} },
 
     // Toggling Comments
     { "keys": ["super+\\"], "command": "toggle_comment", "args": { "block": false } },
