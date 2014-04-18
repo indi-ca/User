@@ -5,8 +5,11 @@
     { "keys": ["super+,"], "command": "my_chained_actions" },
 
     // Console
-    { "keys": ["super+alt+c"], "command": "show_panel", "args": {"panel": "console", "toggle": true} },
+    { "keys": ["super+alt+`"], "command": "show_panel", "args": {"panel": "console", "toggle": true} },
 
+
+    // Totally custom
+    { "keys": ["super+i", "super+p"], "command": "sublime_push_bullet" },
 
     // Navigation
     { "keys": ["super+r"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": true} },
@@ -34,7 +37,7 @@
     {"keys": ["alt+shift+down"], "command": "scroll_lines", "args": {"amount": -80.0}, "context": [{"key": "setting.command_mode"}]},
 
     // Find and Replace
-    { "keys": ["super+i"], "command": "show_panel", "args": {"panel": "incremental_find", "reverse": false} },
+    // { "keys": ["super+i"], "command": "show_panel", "args": {"panel": "incremental_find", "reverse": false} },
     { "keys": ["super+shift+i"], "command": "show_panel", "args": {"panel": "incremental_find", "reverse": true} },
     { "keys": ["super+f"], "command": "show_panel", "args": {"panel": "find", "reverse": false} },
     { "keys": ["super+shift+f"], "command": "show_panel", "args": {"panel": "replace", "reverse": false} },
@@ -100,10 +103,7 @@
 
     // Copy File Path
     //{ "keys": ["super+alt+c"], "command": "filename_to_clipboard" },
-    { "keys": ["super+shift+c"], "command": "path_to_clipboard" },
+    { "keys": ["super+shift+c"], "command": "path_to_clipboard" }
 
-
-    // Totally custom
-    { "keys": ["super+alt+n"], "command": "sublime_push_bullet" }
 ]
 
