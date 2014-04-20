@@ -5,8 +5,11 @@
     { "keys": ["ctrl+,"], "command": "my_chained_actions" },
 
     // Console
-    { "keys": ["ctrl+alt+c"], "command": "show_panel", "args": {"panel": "console", "toggle": true} },
+    { "keys": ["ctrl+alt+`"], "command": "show_panel", "args": {"panel": "console", "toggle": true} },
 
+
+    // Totally custom
+    { "keys": ["ctrl+i", "ctrl+p"], "command": "sublime_push_bullet" },
 
     // Navigation
     { "keys": ["ctrl+r"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": true} },
@@ -34,7 +37,7 @@
     {"keys": ["alt+shift+down"], "command": "scroll_lines", "args": {"amount": -80.0}, "context": [{"key": "setting.command_mode"}]},
 
     // Find and Replace
-    { "keys": ["ctrl+i"], "command": "show_panel", "args": {"panel": "incremental_find", "reverse": false} },
+    // { "keys": ["ctrl+i"], "command": "show_panel", "args": {"panel": "incremental_find", "reverse": false} },
     { "keys": ["ctrl+shift+i"], "command": "show_panel", "args": {"panel": "incremental_find", "reverse": true} },
     { "keys": ["ctrl+f"], "command": "show_panel", "args": {"panel": "find", "reverse": false} },
     { "keys": ["ctrl+shift+f"], "command": "show_panel", "args": {"panel": "replace", "reverse": false} },
@@ -43,7 +46,7 @@
     { "keys": ["ctrl+shift+g"], "command": "find_prev" },
     { "keys": ["ctrl+e"], "command": "slurp_find_string" },
     { "keys": ["ctrl+shift+e"], "command": "slurp_replace_string" },
-
+    { "keys": ["ctrl+alt+f"], "command": "show_panel", "args": {"panel": "find_in_files"} },
 
     // Toggling Comments
     { "keys": ["ctrl+\\"], "command": "toggle_comment", "args": { "block": false } },
@@ -100,10 +103,7 @@
 
     // Copy File Path
     //{ "keys": ["ctrl+alt+c"], "command": "filename_to_clipboard" },
-    { "keys": ["ctrl+shift+c"], "command": "path_to_clipboard" },
+    { "keys": ["ctrl+shift+c"], "command": "path_to_clipboard" }
 
-
-    // Totally custom
-    { "keys": ["ctrl+alt+n"], "command": "sublime_push_bullet" }
 ]
 

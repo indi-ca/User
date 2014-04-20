@@ -10,6 +10,7 @@
 
     // Totally custom
     { "keys": ["super+i", "super+p"], "command": "sublime_push_bullet" },
+    { "keys": ["super+i", "super+shift+p"], "command": "sublime_push_bullet_explore" },
 
     // Navigation
     { "keys": ["super+r"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": true} },
