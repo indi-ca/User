@@ -9,6 +9,7 @@
 
 
     // Totally custom
+    // { "keys": ["super+i", "super+p"], "command": "show_panel", "args": {"panel": "console", "toggle": true} },
     { "keys": ["super+i", "super+p"], "command": "sublime_push_bullet" },
     { "keys": ["super+i", "super+shift+p"], "command": "sublime_push_bullet_explore" },
 
@@ -47,7 +48,7 @@
     { "keys": ["super+shift+g"], "command": "find_prev" },
     { "keys": ["super+e"], "command": "slurp_find_string" },
     { "keys": ["super+shift+e"], "command": "slurp_replace_string" },
-    { "keys": ["super+alt+f"], "command": "show_panel", "args": {"panel": "find_in_files", "where":"/Users/indika/dev/box/safechat/nbwebscan/src/nbwebscan/twitter,-*.conv,-*.py.orig, -*.json"} },
+    { "keys": ["super+alt+f"], "command": "show_panel", "args": {"panel": "find_in_files", "where":"/Users/indika/dev/box/safechat_current/nbwebscan/src/nbwebscan/linkedin,-*.conv,-*.py.orig, -*.json, -*.log"} },
 
     // Toggling Comments
     { "keys": ["super+\\"], "command": "toggle_comment", "args": { "block": false } },
@@ -95,8 +96,8 @@
         }
     },
 
-    { "keys": ["super+alt+shift+left"], "command": "move_to_neighboring_group", "args": {"forward": false} },
-    { "keys": ["super+alt+shift+right"], "command": "move_to_neighboring_group", "args": {"forward": true} },
+    { "keys": ["super+alt+control+left"], "command": "move_to_neighboring_group", "args": {"forward": false} },
+    { "keys": ["super+alt+control+right"], "command": "move_to_neighboring_group", "args": {"forward": true} },
 
 
     { "keys": ["super+y"], "command": "sublimelinter", "args": {"action": "lint"} },
